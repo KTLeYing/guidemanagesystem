@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F7F7F7;
+}
+.items {
+    height: 320px;
+}
+.p {
+    background-color: #2A809D;
+    height: 320px;
+    background-image: linear-gradient(
+            to bottom,
+            #4b6db9 20%,
+            #b2d3ff 80%
+    );/*设置该元素背景自上而下的线性渐变*/
+    font-family: 'Microsoft Yahei';/*设置字体为微软雅黑*/
+    font-size:30px;
+    font-weight:bold;
+    color:#fff;
+    padding-top:40px;
+    line-height:30px;/*文本行高为30px*/
+}
+.item {
+    width: 230px;
+    height: 300px;
+    text-align: center;/*文字水平居中*/
+    margin-right: 20px;
+    background-color: #FFF;
+    float: left;
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    transition: all .5s;/*Css3新增动画属性：过渡，all(默认值)指所有属性改变，整个转换过程在0.5s内完成。*/
+    box-shadow:  #41a8ff 0px 5px 5px ;/*盒阴影：向下偏移5px模糊值5px颜色为#41a8ff*/
+}
+.pic {
+    margin-top: -15px;
+    margin-left: -35px;
+
+}
+.desc {
+    position: absolute;/*绝对定位*/
+    bottom: -100px;
+    width: 100%;/*宽度是父元素宽度的100%*/
+    height: 100px;
+    background-color: #58A6F0;
+    transition: all .5s;
+    background-color: rgba(88,166,240,0.8);
+
+}
+/*当鼠标悬停在该元素时，该元素绝对定位在父元素顶部-5px的位置，并且盒阴影为模糊度15px的#AAA色*/
+.item:hover {
+    top: -5px;
+    box-shadow: 0 0 15px #AAA;
+}
+/*当鼠标悬停在类名为item的元素上时，该元素的类名为.desc的子元素绝对定位，其底部与父元素底部对齐*/
+.item:hover .desc {
+    bottom: 0;
+}
+.detail{
+    font-weight: bold;
+    font-size: 20px;
+   margin-top: 50px;
+}
+.detail i{
+    color: #fc3;
+}
